@@ -1091,6 +1091,14 @@ void CTFPlayer::Regenerate( void )
 
 	// Fill Spy cloak
 	m_Shared.SetSpyCloakMeter( 100.0f );
+	
+	for (int i = 0; i < this->WeaponCount(); ++i)
+	{
+		auto pTFWeapon = dynamic_cast<CTFWeaponBase *>(this->GetWeapon(i));
+		if (pTFWeapon != nullptr) {
+			pTFWeapon->WeaponRegenerate();
+		}
+	}
 }
 
 //-----------------------------------------------------------------------------
@@ -5924,6 +5932,11 @@ void CTFPlayer::CheatImpulseCommands( int iImpulse )
 						continue;
 
 					pWeapon->GiveDefaultAmmo();
+					
+					auto pTFWeapon = dynamic_cast<CTFWeaponBase *>(pWeapon);
+					if (pTFWeapon != nullptr) {
+						pTFWeapon->WeaponRegenerate();
+					}
 				}
 
 				gEvilImpulse101 = false;

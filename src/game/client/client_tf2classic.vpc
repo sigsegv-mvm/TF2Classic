@@ -378,6 +378,8 @@ $Project "Client (TF)"
 						$File	"$SRCDIR\game\shared\tf\tf_weapon_tranq.h"
 						$File	"$SRCDIR\game\shared\tf\tf_weapon_umbrella.cpp"
 						$File	"$SRCDIR\game\shared\tf\tf_weapon_umbrella.h"	
+						$File	"$SRCDIR\game\shared\tf\tf_weapon_stickbomb.cpp"
+						$File	"$SRCDIR\game\shared\tf\tf_weapon_stickbomb.h"
 					}
 					$File	"$SRCDIR\game\shared\tf\tf_weapon_bat.cpp"
 					$File	"$SRCDIR\game\shared\tf\tf_weapon_bat.h"
